@@ -1571,7 +1571,10 @@ sendspin:
   task_stack_in_psram: false
 
 http_request:
-  buffer_size_rx: 2048  # Reduces CPU load when streaming audio
+  buffer_size_rx: 2048 # Reduces CPU load when streaming audio
+  auth:
+    type: bearer
+    token: !secret ha_tts_token
 
 audio_file:
   - id: center_button_press_sound
